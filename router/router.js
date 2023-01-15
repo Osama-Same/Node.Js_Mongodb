@@ -5,6 +5,7 @@ const {
   findUser,
   updateUser,
   deleteUser,
+  login
 } = require("../controller/users");
 const { upload } = require("../connection/upload");
 
@@ -14,4 +15,5 @@ router.get("/users/:_id", findUser);
 router.put("/users/:id", upload.single("image"), updateUser);
 router.post("/users", upload.single("image"), createUser);
 router.delete("/users/:id", deleteUser);
+router.post("/login", login);
 module.exports = router;
