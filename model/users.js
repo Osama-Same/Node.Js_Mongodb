@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // by initializing a new schema it is possible to create a document that would hold user information
 const userSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   phone: { type: Number, required: true },
